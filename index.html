@@ -6,6 +6,12 @@
     <title>PH-tube project</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .active{
+            background: #FF1F3D;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,32 +28,29 @@
         </nav>
     </header>
     <nav id="catagory-container" class="flex py-6 gap-6 justify-center">
-        <div><button onclick="loadVideo()" class="btn btn-md bg-red-500 text-white font-semibold">All</button></div>
+        <div><button id="btn-all"  onclick="loadVideo()" class="btn btn-md  font-semibold">All</button></div>
     </nav>
     <section id="video-container" class="max-w-screen-xl mx-auto grid grid-cols-4 gap-4">
-        <!-- <div class="card bg-base-100 ">
-            <figureb class="relative">
-              <img
-                src="https://i.ibb.co/QPNzYVy/moonlight.jpg"
-                alt="Shoes" />
-                <span class="absolute left-46 bottom-36 text-white bg-black px-2 rounded-sm text-sm">3hrs 56 min ago</span>
-            </figure>
-            <div class="flex gap-3 py-5 px-0">
-            <div class="profile">
-                <div class="avatar">
-                    <div class="ring-primary ring-offset-base-100 w-6 rounded-full ring ring-offset-2">
-                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                    </div>
-                  </div>
-            </div>
-            <div class="intro">
-               <h2 class="text-sm font-semibold">Midnight Serenade</h2>
-               <p class="text-sm text-gray-400 flex gap-1 ">Awlad Hossain <img class="w-5" src="https://img.icons8.com/?size=96&id=98A4yZTt9abw&format=png" alt=""></p>
-               <p class="text-sm text-gray-400">91K views</p>
-            </div>
-            </div>
-          </div> -->
+        <div class="py-22 col-span-full flex flex-col justify-center items-center text-center">
+            <img class="w-[120px]" src="assets/Icon.png" alt="">
+            <h2 class="font-bold text-4xl">Oops!! Sorry, There is no <br> content here</h2>
+        </div>
     </section>
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="video_details" class="modal">
+  <div class="modal-box">
+   <div id="details-container">
+
+   </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn hover:bg-blue-500 hover:text-white">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
    <script src="script/index.js"></script>
 </body>
 </html>
